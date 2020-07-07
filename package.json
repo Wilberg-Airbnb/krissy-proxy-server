@@ -7,10 +7,11 @@
   "engines": {
     "node": ">=6.13.0"
   },
+  "proxy": "http://localhost:2001",
+
   "scripts": {
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon ./server/app.js",
-    "seed": "node database-mongodb/seed.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors"
