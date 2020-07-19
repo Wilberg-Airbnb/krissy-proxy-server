@@ -4,6 +4,7 @@ const port = 1000;
 
 /* use this for query params in url */
 // app.use(express.static('./public'));
+
 app.use('/:listingId', express.static('public'));
 
 app.use(express.json());

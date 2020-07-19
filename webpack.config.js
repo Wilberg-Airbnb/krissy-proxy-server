@@ -3,7 +3,7 @@ const dotenv = require('dotenv').config({path: __dirname + '/.env'});
 // const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  entry: __dirname + '/client/app.jsx',
+  entry: __dirname + '/client/src/index.jsx',
   module: {
     rules: [
       {
@@ -15,6 +15,14 @@ module.exports = {
             presets: ['@babel/preset-react', '@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       }
     ]
   },
