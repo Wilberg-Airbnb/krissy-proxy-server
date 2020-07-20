@@ -10,7 +10,8 @@ const headerContainer = {
   alignItems: 'center',
   height: '80px',
   position: 'relative !important',
-  zIndex: '1 !important'
+  zIndex: '1 !important',
+  borderBottom: '1px solid #c6c6c6'
 };
 
 const buttonLocation= {
