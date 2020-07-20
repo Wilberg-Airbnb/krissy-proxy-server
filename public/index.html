@@ -6,20 +6,46 @@
     <meta name=”description” content="item page for Airbrb like AirBnb " />
     <meta name=”keywords” content="Airbnb, staycation, experiences, homestay">
     <meta name=viewport content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+    <style>
+      body {
+        background-color: rgb(255,255,255);
+        font-family: 'Poppins', sans-serif;
+        color: rgb(34, 34, 34);
+      }
+
+     .app-container {
+      border-bottom: 1px solid #c6c6c6;
+      text-align: center
+      }
+      /* i.icon.user:before {
+        content: "\f0c9";
+      } */
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="app-container">
+      <div id="app"></div>
+    </div>
     <div id="reservation"></div>
-    <div id="description"></div>
-    <div id="description-modal-root"></div>
-    <div id="review"></div>
-    <div id="reviewmodal-root"></div>
-    <div id="location"></div>
-    <div id="about-modal"></div>
+    <div >
+      <div id="description"></div>
+      <div id="description-modal-root"></div>
+    </div>
+    <div class="app-container">
+      <div id="review"></div>
+      <div id="reviewmodal-root"></div>
+    </div>
+    <div class="app-container">
+      <div id="location"></div>
+      <div id="about-modal"></div>
+    </div>
+ 
     <script src="bundle.js"></script> 
     <script src="http://localhost:4000/public/bundle.js"></script>
-    <script src="http://localhost:5000/public/bundle.js"></script>
+    <!-- <script src="http://localhost:5000/public/bundle.js"></script> -->
     <script src="http://localhost:8080/public/bundle.js"></script>
-    <script src="http://localhost:2001/public/bundle.js"></script>
+    <!-- <script src="http://localhost:2001/public/bundle.js"></script> -->
   </body>
 </html>

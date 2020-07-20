@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Topbar from './Topbar.jsx'
 
 
 class AirBrb extends React.Component {
@@ -19,11 +19,12 @@ class AirBrb extends React.Component {
 
   render() {
     return(
-      <div>AirBrb
+      <div>
+       <Topbar/>
   
       </div>
     )
   }
 }
 
-ReactDOM.render(<AirBrb />, document.getElementById('app'));
+export default AirBrb;
