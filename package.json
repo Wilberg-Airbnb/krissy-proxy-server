@@ -15,7 +15,14 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors"
   },
+  "jest": {
+    "moduleNameMapper": {
+         "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "mocks/logomock.js",
+         "\\.(css|less)$": "./mocks/logomock.js"
+       }
+   },
   "dependencies": {
+    "babel-plugin-file-loader": "^2.0.0",
     "bluebird": "^3.7.2",
     "dotenv-webpack": "^1.8.0",
     "express": "^4.17.1",
