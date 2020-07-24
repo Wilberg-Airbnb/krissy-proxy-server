@@ -7,6 +7,7 @@ const headerContainer = {
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
+  textAlign: 'center',
   alignItems: 'center',
   height: '80px',
   position: 'relative !important',
@@ -73,10 +74,6 @@ class Topbar extends React.Component {
     
   }
 
-  
-
-
-
   render() {
     return(
       // <Grid columns='three'>
@@ -102,19 +99,19 @@ class Topbar extends React.Component {
         <div style={col}>
             <button style={buttonLocation}>
               <div>
-                <i class="search icon" style={{color: '#ff385c'}}></i>
+                <i className="search icon" style={{color: '#ff385c'}}></i>
                 Add a Location
               </div>
             </button>
         </div>
         <div style={col}>
           <button style={buttonLang}>
-            <span style={{flex: '1'}}><i width={16} style={icon} class='world icon'/></span>
-            <span style={{flex: '1'}}><i width={16} style={icon} class='angle down icon'/></span>
+            <span style={{flex: '1'}}><i width={16} style={icon} className='world icon'/></span>
+            <span style={{flex: '1'}}><i width={16} style={icon} className='angle down icon'/></span>
           </button>
           <button style={buttonUser}>
-           <span style={{flex: '1'}}><i width={16} style={icon} class="bars icon"/></span>
-           <span style={{flex: '1'}}><i width={16}style={icon} class='user circle icon'/></span>
+           <span style={{flex: '1'}}><i width={16} style={icon} className="bars icon"/></span>
+           <span style={{flex: '1'}}><i width={16}style={icon} className='user circle icon'/></span>
         
           </button>
         </div>
