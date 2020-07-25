@@ -1,5 +1,6 @@
 import React from 'react';
 import Topbar from './Topbar.jsx'
+import StickyNav from './StickyMenu.jsx'
 
 
 class AirBrb extends React.Component {
@@ -21,7 +22,7 @@ class AirBrb extends React.Component {
     return(
       <div>
        <Topbar/>
-  
+      <StickyNav/>
       </div>
     )
   }

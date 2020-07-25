@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  proxy:
+    image: proxy-server
+    container_name: proxy
+    build: .
+    restart: always
+    ports:
+      - "1000:1000"
+    command: bash -c "npm run server-dev"
+

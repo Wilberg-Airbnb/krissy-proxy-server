@@ -7,10 +7,12 @@ const headerContainer = {
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
+  textAlign: 'center',
   alignItems: 'center',
   height: '80px',
   position: 'relative !important',
-  zIndex: '1 !important'
+  zIndex: '1 !important',
+  borderBottom: '1px solid #c6c6c6'
 };
 
 const buttonLocation= {
@@ -20,7 +22,8 @@ const buttonLocation= {
   fontSize: '14px',
   height: '48px',
   width: '220px',
-  transition: 'box-show 0.2 ease 0s'
+  transition: 'box-show 0.2 ease 0s',
+  cursor: 'pointer'
 };
 
 const buttonLang = {
@@ -32,7 +35,8 @@ const buttonLang = {
   overflow: 'visible',
   position: 'relative',
   verticalAlign: 'middle',
-  padding: '5px 5px 5px 5px'
+  padding: '5px 5px 5px 5px',
+  cursor: 'pointer'
 };
 
 const buttonUser = {
@@ -46,7 +50,8 @@ const buttonUser = {
   overflow: 'visible',
   position: 'relative',
   verticalAlign: 'middle',
-  padding: '5px 5px 5px 5px'
+  padding: '5px 5px 5px 5px',
+  cursor: 'pointer'
 };
 
 const col = {
@@ -60,7 +65,8 @@ const icon = {
 
 const png = {
   left: '0px',
-  zIndex: '100'
+  zIndex: '100',
+  cursor: 'pointer'
 }
 
 class Topbar extends React.Component {
@@ -72,28 +78,9 @@ class Topbar extends React.Component {
     
   }
 
-  
-
-
-
   render() {
     return(
-      // <Grid columns='three'>
-      //    <Grid.Row>
-      //     <Grid.Column>
-      //       <p>icon</p>
-      //       {/* <Image src={Logo} height={32}/> */}
-      //     </Grid.Column>
-      //     <Grid.Column>
-      //       <button>Add a location</button>
-      //     </Grid.Column>
-      //     <Grid.Column>
-      //       <button className='language-selector'>language selector</button>
-      //       <a href='#'>Help</a>
-      //       <button>Language</button>
-      //     </Grid.Column>
-      //   </Grid.Row>
-      // </Grid>
+
     <header style={headerContainer}>
         <div style={col}>
           <img src={Logo} height={32} style={png}/>
@@ -101,19 +88,19 @@ class Topbar extends React.Component {
         <div style={col}>
             <button style={buttonLocation}>
               <div>
-                <i class="search icon" style={{color: '#ff385c'}}></i>
+                <i className="search icon" style={{color: '#ff385c'}}></i>
                 Add a Location
               </div>
             </button>
         </div>
         <div style={col}>
           <button style={buttonLang}>
-            <span style={{flex: '1'}}><i width={16} style={icon} class='world icon'/></span>
-            <span style={{flex: '1'}}><i width={16} style={icon} class='angle down icon'/></span>
+            <span style={{flex: '1'}}><i width={16} style={icon} className='world icon'/></span>
+            <span style={{flex: '1'}}><i width={16} style={icon} className='angle down icon'/></span>
           </button>
           <button style={buttonUser}>
-           <span style={{flex: '1'}}><i width={16} style={icon} class="bars icon"/></span>
-           <span style={{flex: '1'}}><i width={16}style={icon} class='user circle icon'/></span>
+           <span style={{flex: '1'}}><i width={16} style={icon} className="bars icon"/></span>
+           <span style={{flex: '1'}}><i width={16}style={icon} className='user circle icon'/></span>
         
           </button>
         </div>
