@@ -22,7 +22,8 @@ const buttonLocation= {
   fontSize: '14px',
   height: '48px',
   width: '220px',
-  transition: 'box-show 0.2 ease 0s'
+  transition: 'box-show 0.2 ease 0s',
+  cursor: 'pointer'
 };
 
 const buttonLang = {
@@ -34,7 +35,8 @@ const buttonLang = {
   overflow: 'visible',
   position: 'relative',
   verticalAlign: 'middle',
-  padding: '5px 5px 5px 5px'
+  padding: '5px 5px 5px 5px',
+  cursor: 'pointer'
 };
 
 const buttonUser = {
@@ -48,7 +50,8 @@ const buttonUser = {
   overflow: 'visible',
   position: 'relative',
   verticalAlign: 'middle',
-  padding: '5px 5px 5px 5px'
+  padding: '5px 5px 5px 5px',
+  cursor: 'pointer'
 };
 
 const col = {
@@ -62,7 +65,8 @@ const icon = {
 
 const png = {
   left: '0px',
-  zIndex: '100'
+  zIndex: '100',
+  cursor: 'pointer'
 }
 
 class Topbar extends React.Component {
@@ -76,22 +80,7 @@ class Topbar extends React.Component {
 
   render() {
     return(
-      // <Grid columns='three'>
-      //    <Grid.Row>
-      //     <Grid.Column>
-      //       <p>icon</p>
-      //       {/* <Image src={Logo} height={32}/> */}
-      //     </Grid.Column>
-      //     <Grid.Column>
-      //       <button>Add a location</button>
-      //     </Grid.Column>
-      //     <Grid.Column>
-      //       <button className='language-selector'>language selector</button>
-      //       <a href='#'>Help</a>
-      //       <button>Language</button>
-      //     </Grid.Column>
-      //   </Grid.Row>
-      // </Grid>
+
     <header style={headerContainer}>
         <div style={col}>
           <img src={Logo} height={32} style={png}/>
