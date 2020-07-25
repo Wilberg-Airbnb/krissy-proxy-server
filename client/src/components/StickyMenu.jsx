@@ -4,7 +4,6 @@ import { Sticky, Menu, Segment } from 'semantic-ui-react';
 
 const menuStyle = {
   padding: '0px 40px',
-  backgroundColor: '#fff solid',
   borderTop: 'none'
 };
 
@@ -32,7 +31,7 @@ class StickyNav extends React.Component {
     return (
       ReactDOM.createPortal(
   <div ref={this.contextRef}>
-    <Sticky context={this.contextRef}>
+    <Sticky context={this.contextRef} style={{backgroundColor: '#fff'}}>
   <Menu attached='top' pointing secondary style={menuStyle}>
   <Menu.Item href='#photos' style={itemStyle} onMouseEnter={displayBottomBorder} onMouseLeave={noBorder}>Photos</Menu.Item>
   <Menu.Item href='#amenities' style={itemStyle} onMouseEnter={displayBottomBorder} onMouseLeave={noBorder} >Amenities</Menu.Item>
