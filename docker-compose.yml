@@ -8,5 +8,5 @@ services:
     restart: always
     ports:
       - "1000:1000"
-    command: bash -c "npm run start"
+    command: bash -c "npm run server-dev"
 

@@ -1,21 +1,31 @@
 import React, {Component, createRef} from 'react';
 import { Sticky, Menu } from 'semantic-ui-react';
 
-// const HoverItems= styled.p`
-//   padding-top: 30px;
-//   padding-botton:
-// 	:hover {
-// 		border-bottom: '1px solid #c6c6c6'
-// 		cursor: pointer;
-// 	}
-// `
+const menuStyle = {
+
+  padding: '0px 40px'
+};
+
+const itemStyle={
+  paddingTop: '30px',
+  paddingBottom: '30px'
+
+}
+
 
 
 const displayBottomBorder = (e) => (
+ 
   e.target.style.borderBottom = '2px solid black'
+
 )
 
-class StickyMenu extends React.Component {
+const noBorder =(e) => {
+
+   e.target.style.borderBottom = 'none'
+}
+
+class StickyNav extends React.Component {
 
   constructor(props) {
     super(props);
@@ -32,18 +42,18 @@ class StickyMenu extends React.Component {
   render(){
     return(
 
-  <Menu compact>
-  <Menu.Item href='#photos' onMouseEnter={displayBottomBorder}>Photos</Menu.Item>
-  <Menu.Item href='#amenities'>Amenities</Menu.Item>
-  <Menu.Item href='#review'>Reviews</Menu.Item>
-  <Menu.Item href='#location'>Location</Menu.Item>
+  <Menu pointing secondary style={menuStyle}>
+  <Menu.Item href='#photos' style={itemStyle} onMouseEnter={displayBottomBorder} onMouseLeave={noBorder}>Photos</Menu.Item>
+  <Menu.Item href='#amenities' style={itemStyle} onMouseEnter={displayBottomBorder} onMouseLeave={noBorder} >Amenities</Menu.Item>
+  <Menu.Item href='#review' style={itemStyle} onMouseEnter={displayBottomBorder} onMouseLeave={noBorder}>Reviews</Menu.Item>
+  <Menu.Item href='#location' style={itemStyle} onMouseEnter={displayBottomBorder} onMouseLeave={noBorder}>Location</Menu.Item>
   </Menu>
     )
   }
     
   }
 
-export default StickyMenu;
+export default StickyNav;
 
 //   state = {}
 
