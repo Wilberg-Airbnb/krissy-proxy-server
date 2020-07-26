@@ -1,10 +1,11 @@
 import React, {Component, createRef} from 'react';
 import ReactDOM from 'react-dom';
-import { Sticky, Menu, Segment } from 'semantic-ui-react';
+import { Sticky, Menu, Segment, Grid } from 'semantic-ui-react';
 
 const menuStyle = {
   padding: '0px 40px',
-  borderTop: 'none'
+  borderTop: 'none',
+  backgroundColor: '#fff'
 };
 
 const itemStyle={
@@ -39,7 +40,15 @@ class StickyNav extends React.Component {
   <Menu.Item href='#location' style={itemStyle} onMouseEnter={displayBottomBorder} onMouseLeave={noBorder}>Location</Menu.Item>
   </Menu>
   </Sticky>
-  <Segment attached='bottom' id={'reservation'}></Segment>
+  {/* <Grid attached='bottom' style={{borderBottom: '1px solid black'}}>
+    {/* <Grid.Row  id={'reservation'}/> */}
+        {/* <Grid.Colunn floated='right' id={'reservation'}/> */}
+        {/* <Grid.Column floated='left'>
+          <Grid.Row  id={'description'}/>
+          <Grid.Row  id={'description-modal-root'}/>
+        </Grid.Column>
+    <Grid.Row  id={'amenities'}/> */}
+  {/* </Grid> */} */}
   </div>,
   document.getElementById('nav'))
     );
