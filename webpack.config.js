@@ -26,12 +26,6 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    // new Dotenv()
-    new webpack.DefinePlugin({
-      "process.env": dotenv.parsed
-    })
-  ],
   output: {
     filename: 'bundle.js',
     path: __dirname + '/public'
