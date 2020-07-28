@@ -1,6 +1,9 @@
+const compression = require('compression');
 const express = require('express');
 const app = express();
 const port = 1000;
+
+app.use(compression());
 
 /* use this for query params in url */
 // app.use(express.static('./public'));
