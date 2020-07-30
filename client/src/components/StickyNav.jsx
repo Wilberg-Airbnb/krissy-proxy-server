@@ -35,8 +35,6 @@ class StickyNav extends React.Component {
     };
     this.contextRef = React.createRef();
     this.scroll = this.scroll.bind(this);
-
-
   }
 
   scroll(){
@@ -63,7 +61,6 @@ class StickyNav extends React.Component {
         </div>)
       }
 
-    
 }
 
 export default StickyNav;

@@ -71,14 +71,10 @@ class Topbar extends React.Component {
 
   constructor(props) {
     super(props);
-
-  
-    
   }
 
   render() {
     return(
-
     <header style={headerContainer}>
         <div style={col}>
           <img src={Logo} height={32} style={png}/>
@@ -99,7 +95,6 @@ class Topbar extends React.Component {
           <button style={buttonUser}>
            <span style={{flex: '1'}}><i width={16} style={icon} className="bars icon"/></span>
            <span style={{flex: '1'}}><i width={16}style={icon} className='user circle icon'/></span>
-        
           </button>
         </div>
     </header>

@@ -20,9 +20,8 @@ class AirBrb extends React.Component {
       <div>
         <Topbar/>
         <Container style={{justifyContent: 'center', paddingBottom: '48px'}} >
-          <Grid col={1} style={{ paddingTop: '24px', paddingBottom: '0px', justifyContent: 'center'}} onScroll={this.handleScroll}>
+          <Grid col={1} style={{ paddingTop: '34px', paddingBottom: '0px', justifyContent: 'center'}} onScroll={this.handleScroll}>
             <Grid.Row id={'photos'} style={{padding: '0px'}}/>
-            <Grid.Row id={'photo-modal'} style={{padding: '0px'}}/>
           </Grid>
         </Container>
       <StickyNav id={'nav'}/>

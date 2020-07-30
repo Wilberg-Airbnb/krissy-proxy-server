@@ -10,6 +10,7 @@
   "proxy": "http://localhost:2001",
   "scripts": {
     "start": "node ./server/app.js",
+    "react-prod": "webpack -p --watch",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon ./server/app.js",
     "test": "jest",
