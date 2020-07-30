@@ -16,23 +16,6 @@ const FooterContainer = {
   fontSize: '12px',
 };
 
-const col = {
-  flex: '1',
-};
-
-const icon = {
-  margin: '0',
-  color: '#717171',
-};
-
-const underline = {
-  textDecoration: 'underline',
-};
-
-const logoSpread = {
-  display: 'flex',
-  justifyContent: 'space-between',
-};
 class Footer extends React.Component {
   constructor(props) {
     super(props);
