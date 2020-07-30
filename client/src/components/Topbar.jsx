@@ -1,7 +1,5 @@
 import React from 'react';
 import Logo from '../images/airbrb.png'
-// import Subheader from './Subheader.jsx';
-// import { Grid, Image, Button, Icon } from 'semantic-ui-react';
 
 const headerContainer = {
   display: 'flex',
