@@ -26,13 +26,30 @@ const noBorder =(e) => {
    e.target.style.borderBottom = 'none'
 }
 
+function fadeIn(el, time) {
+  el.style.opacity = 0;
+
+  var last = +new Date();
+  var tick = function() {
+    el.style.opacity = +el.style.opacity + (new Date() - last) / time;
+    last = +new Date();
+
+    if (+el.style.opacity < 1) {
+      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+    }
+  };
+
+  tick();
+}
+
 class StickyNav extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
       showNav: false,
-      scroll: 0
+      scroll: 0,
+      faded: false
     };
     this.contextRef = React.createRef();
     this.scroll = this.scroll.bind(this);
@@ -48,8 +65,19 @@ class StickyNav extends React.Component {
   componentDidMount() {
     window.addEventListener('scroll', (e)=> {
       this.setState({
-        scroll: window.scrollY
+        scroll: window.scrollY,
       })
+
+      if (window.scrollY > 2165 && this.state.faded === false) {
+        var mini = document.getElementById("reservation-mini");
+        fadeIn(mini, 500)
+        this.setState({faded: true});
+      }
+
+      if (window.scrollY < 2165 && this.state.faded === true) {
+        console.log('hey')
+        this.setState({faded: false});
+      }
     }, true);
   }
 
