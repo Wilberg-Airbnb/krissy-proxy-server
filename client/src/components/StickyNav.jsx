@@ -68,7 +68,8 @@ class StickyNav extends React.Component {
           </Menu>
         </Sticky>
         : null
-        }
+      }
+      <Sticky context={this.contextRef} attach="top" style={{margin: "300px 200px 0px 1090px"}}><div id='reservation-mini' style={{marginTop: "10px"}}></div></Sticky>
         <BelowSticky scroll={this.scroll}/>
         </div>)
       }
