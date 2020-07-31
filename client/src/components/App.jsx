@@ -23,7 +23,6 @@ class AirBrb extends React.Component {
               paddingBottom: '0px',
               justifyContent: 'center',
             }}
-            onScroll={this.handleScroll}
           >
             <Grid.Row id={'photos'} style={{ padding: '0px' }} />
           </Grid>

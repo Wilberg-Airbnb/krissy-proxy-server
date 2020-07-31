@@ -31,7 +31,7 @@ class Footer extends React.Component {
         </div>
         <div>
           <span>
-            <i width={16} style={icon} className="world icon" />
+            {/* <i width={16} style={icon} className="world icon" /> */}
             <span style={{ marginRight: '2rem', textDecoration: 'underline' }}>
               English(US)
             </span>
