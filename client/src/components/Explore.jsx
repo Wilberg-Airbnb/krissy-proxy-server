@@ -33,9 +33,9 @@ const Explore = () => {
   return (
     <div>
       <section style={exploreSectionStyles}>
-        <h3 style={{marginBottom: "5px"}}>Explore other options around the world</h3>
+        <h2 style={{marginBottom: "5px"}}>Explore other options around the world</h2>
         <div style={{ margin: "50px, 0px" }}>
-          <h5>More places to stay:</h5>
+          <h4>More places to stay:</h4>
           <h6 style={exploreSubHeading} >Apartments•Houses•Bed and breakfasts•Lofts•Villas</h6>
         </div>
         <aside style={listOfPlacesStyles}>
