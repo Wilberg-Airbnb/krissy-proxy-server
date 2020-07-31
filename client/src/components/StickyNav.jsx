@@ -26,13 +26,30 @@ const noBorder =(e) => {
    e.target.style.borderBottom = 'none'
 }
 
+function fadeIn(el, time) {
+  el.style.opacity = 0;
+
+  var last = +new Date();
+  var tick = function() {
+    el.style.opacity = +el.style.opacity + (new Date() - last) / time;
+    last = +new Date();
+
+    if (+el.style.opacity < 1) {
+      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+    }
+  };
+
+  tick();
+}
+
 class StickyNav extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
       showNav: false,
-      scroll: 0
+      scroll: 0,
+      faded: false
     };
     this.contextRef = React.createRef();
     this.scroll = this.scroll.bind(this);
@@ -48,15 +65,25 @@ class StickyNav extends React.Component {
   componentDidMount() {
     window.addEventListener('scroll', (e)=> {
       this.setState({
-        scroll: window.scrollY
+        scroll: window.scrollY,
       })
+
+      if (window.scrollY > 2165 && this.state.faded === false) {
+        var mini = document.getElementById("reservation-mini");
+        fadeIn(mini, 500)
+        this.setState({faded: true});
+      }
+
+      if (window.scrollY < 2165 && this.state.faded === true) {
+        this.setState({faded: false});
+      }
     }, true);
   }
 
   render(){
     return (
       <div ref={this.contextRef}>
-        {this.state.scroll >= 690 ?
+        {this.state.scroll > 690 ?
         <Sticky context={this.contextRef} style={{backgroundColor: '#fff'}}>
         {/* <Sticky context={this.contextRef} style={{backgroundColor: '#fff', display: this.state.showNav ?'inline' : 'none'}}> */}
           <Menu attached='top' pointing secondary style={menuStyle}>
@@ -68,7 +95,13 @@ class StickyNav extends React.Component {
           </Menu>
         </Sticky>
         : null
-        }
+      }
+      {
+        this.state.scroll > 2165 ?
+        <Sticky context={this.contextRef} attach="top" style={{margin: "300px 200px 0px 66%"}} onClick={() => window.scrollTo(0, 1630)}><div id='reservation-mini' style={{marginTop: "10px"}}></div></Sticky>
+        : <Sticky context={this.contextRef} attach="top" style={{display: "none"}} ><div id='reservation-mini' style={{marginTop: "10px"}}></div></Sticky>
+
+      }
         <BelowSticky scroll={this.scroll}/>
         </div>)
       }
