@@ -56,7 +56,7 @@ class StickyNav extends React.Component {
   render(){
     return (
       <div ref={this.contextRef}>
-        {this.state.scroll >= 690 ?
+        {this.state.scroll > 690 ?
         <Sticky context={this.contextRef} style={{backgroundColor: '#fff'}}>
         {/* <Sticky context={this.contextRef} style={{backgroundColor: '#fff', display: this.state.showNav ?'inline' : 'none'}}> */}
           <Menu attached='top' pointing secondary style={menuStyle}>
@@ -70,7 +70,7 @@ class StickyNav extends React.Component {
         : null
       }
       {
-        this.state.scroll >= 2165 ?
+        this.state.scroll > 2165 ?
         <Sticky context={this.contextRef} attach="top" style={{margin: "300px 200px 0px 1090px"}}><div id='reservation-mini' style={{marginTop: "10px"}}></div></Sticky>
         : <Sticky context={this.contextRef} attach="top" style={{margin: "300px 200px 0px 1090px", display: "none"}}><div id='reservation-mini' style={{marginTop: "10px"}}></div></Sticky>
 
