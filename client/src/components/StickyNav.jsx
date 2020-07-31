@@ -75,7 +75,6 @@ class StickyNav extends React.Component {
       }
 
       if (window.scrollY < 2165 && this.state.faded === true) {
-        console.log('hey')
         this.setState({faded: false});
       }
     }, true);
