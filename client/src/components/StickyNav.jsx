@@ -31,7 +31,8 @@ class StickyNav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showNav: false
+      showNav: false,
+      scroll: 0
     };
     this.contextRef = React.createRef();
     this.scroll = this.scroll.bind(this);
@@ -44,9 +45,18 @@ class StickyNav extends React.Component {
    
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', (e)=> {
+      this.setState({
+        scroll: window.scrollY
+      })
+    }, true);
+  }
+
   render(){
     return (
       <div ref={this.contextRef}>
+        {this.state.scroll >= 690 ?
         <Sticky context={this.contextRef} style={{backgroundColor: '#fff'}}>
         {/* <Sticky context={this.contextRef} style={{backgroundColor: '#fff', display: this.state.showNav ?'inline' : 'none'}}> */}
           <Menu attached='top' pointing secondary style={menuStyle}>
@@ -57,6 +67,8 @@ class StickyNav extends React.Component {
           <Menu.Item href='#location' style={itemStyle} onMouseEnter={displayBottomBorder} onMouseLeave={noBorder}>Location</Menu.Item>
           </Menu>
         </Sticky>
+        : null
+        }
         <BelowSticky scroll={this.scroll}/>
         </div>)
       }
