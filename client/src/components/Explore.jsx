@@ -24,10 +24,6 @@ const exploreCellStyles = {
   paddingTop: "20px"
 }
 
-const exploreSubHeading = {
-  marginTop: "5px"
-}
-
 
 const Explore = () => {
   return (
@@ -36,7 +32,7 @@ const Explore = () => {
         <h2 style={{marginBottom: "5px"}}>Explore other options around the world</h2>
         <div style={{ margin: "50px, 0px" }}>
           <h4>More places to stay:</h4>
-          <h6 style={exploreSubHeading} >Apartments•Houses•Bed and breakfasts•Lofts•Villas</h6>
+          <h6 style={{marginTop: "5px"}} >Apartments•Houses•Bed and breakfasts•Lofts•Villas</h6>
         </div>
         <aside style={listOfPlacesStyles}>
           <article style={exploreColumnStyles}>
