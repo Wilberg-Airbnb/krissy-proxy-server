@@ -1,5 +1,6 @@
 import React, {Component, createRef} from 'react';
 import { Container, Grid, Rail, Ref, Sticky, Segment } from 'semantic-ui-react';
+import Explore from './Explore.jsx'
 
 class BelowSticky extends React.Component {
 
@@ -47,6 +48,7 @@ class BelowSticky extends React.Component {
           <Grid.Row id={'thingsToKnow'} style={{padding: '48px 0px'}}/>
           <Grid.Row id={'suggestions'}/>
           <Grid.Row id={'things-to-do-carousel'}/>
+          <Grid.Row style={{background: "#F7F7F7", borderTop: "1px solid #c6c6c6"}}><Explore/></Grid.Row>
         </Grid>
       </Container>
     )
