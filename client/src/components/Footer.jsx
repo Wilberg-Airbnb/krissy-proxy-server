@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../images/airbrb.png';
+import { Grid } from 'semantic-ui-react';
 
 const FooterContainer = {
   display: 'flex',
@@ -8,12 +8,12 @@ const FooterContainer = {
   alignItems: 'center',
   position: 'relative !important',
   zIndex: '1 !important',
-  borderBottom: '1px solid #c6c6c6',
   margin: 'auto',
   paddingTop: '10px',
   paddingBottom: '10px',
   width: '70%',
   fontSize: '12px',
+  backgroundColor: 'rgb(247, 247, 247)'
 };
 
 class Footer extends React.Component {
@@ -23,7 +23,7 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <header style={FooterContainer}>
+      <Grid.Row style={FooterContainer}>
         <div>
           <span>
             © 2020 Airbnb, Inc. All rights reserved·Privacy·Terms·Sitemap
@@ -31,7 +31,7 @@ class Footer extends React.Component {
         </div>
         <div>
           <span>
-            {/* <i width={16} style={icon} className="world icon" /> */}
+            <i width={16} className="world icon" />
             <span style={{ marginRight: '2rem', textDecoration: 'underline' }}>
               English(US)
             </span>
@@ -50,7 +50,7 @@ class Footer extends React.Component {
             <i class="instagram icon" style={{ fontSize: '18px' }}></i>
           </span>
         </div>
-      </header>
+      </Grid.Row>
     );
   }
 }

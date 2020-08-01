@@ -2,8 +2,8 @@ import React from 'react';
 import Topbar from './Topbar.jsx';
 import StickyNav from './StickyNav.jsx';
 import { Container, Grid } from 'semantic-ui-react';
-import Footer from './Footer.jsx';
-import InformationStatic from './InformationStatic.jsx';
+// import Footer from './Footer.jsx';
+// import InformationStatic from './InformationStatic.jsx';
 class AirBrb extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +15,7 @@ class AirBrb extends React.Component {
     return (
       <div>
         <Topbar />
-        <Container style={{ justifyContent: 'center', paddingBottom: '48px' }}>
+        <Container className={'container-photos'} style={{ justifyContent: 'center', paddingBottom: '48px' }}>
           <Grid
             col={1}
             style={{
@@ -26,10 +26,12 @@ class AirBrb extends React.Component {
           >
             <Grid.Row id={'photos'} style={{ padding: '0px' }} />
           </Grid>
-        </Container>
+          </Container>
+       
         <StickyNav id={'nav'} />
-        <InformationStatic />
-        <Footer />
+        {/* <InformationStatic />
+        <Footer /> */}
+ 
       </div>
     );
   }

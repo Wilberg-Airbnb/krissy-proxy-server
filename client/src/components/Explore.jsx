@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Grid } from 'semantic-ui-react';
 
 const exploreSectionStyles = {
   margin: "200px, 20px",
@@ -27,7 +28,7 @@ const exploreCellStyles = {
 
 const Explore = () => {
   return (
-    <div>
+    <Grid.Row style={{background: "#F7F7F7", borderTop: "1px solid #c6c6c6", paddingTop: '48px'}}>
       <section style={exploreSectionStyles}>
         <h2 style={{marginBottom: "5px"}}>Explore other options around the world</h2>
         <div style={{ margin: "50px, 0px" }}>
@@ -61,7 +62,7 @@ const Explore = () => {
           </article>
         </aside>
       </section>
-    </div>
+      </Grid.Row>
   )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../images/airbrb.png';
+import { Grid } from 'semantic-ui-react';
 
 const InformationContainer = {
   display: 'flex',
@@ -15,6 +15,8 @@ const InformationContainer = {
   fontSize: '12px',
   alignItems: 'end',
   borderBottom: '1px solid #c6c6c6',
+  borderTop: '1px solid #c6c6c6',
+  backgroundColor: 'rgb(247, 247, 247)'
 };
 
 const InformationBox = {
@@ -44,7 +46,7 @@ class InformationStatic extends React.Component {
 
   render() {
     return (
-      <header style={InformationContainer}>
+      <Grid.Row style={InformationContainer}>
         <div>
           <div style={InformationBox}>
             <div style={Bolded}>ABOUT</div>
@@ -93,7 +95,7 @@ class InformationStatic extends React.Component {
             <div style={ListingStyling}>Neighborhood Support</div>
           </div>
         </div>
-      </header>
+      </Grid.Row>
     );
   }
 }
